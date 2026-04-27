@@ -45,34 +45,34 @@ export default function Packs() {
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-14">
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-5 mb-14">
           {packs.map((pack) => (
             <div
               key={pack.id}
-              className={`relative rounded-2xl p-7 border transition-all duration-200 hover:-translate-y-1 hover:shadow-xl ${
+              className={`relative rounded-2xl p-4 sm:p-7 border transition-all duration-200 hover:-translate-y-1 hover:shadow-xl ${
                 pack.popular
                   ? "bg-[#c9ed76] border-[#c9ed76]"
                   : "bg-stone-50 border-stone-100"
               }`}
             >
               {pack.popular && (
-                <span className="absolute -top-3 left-7 bg-stone-900 text-white text-xs font-bold px-3 py-1 rounded-full tracking-wide">
+                <span className="absolute -top-3 left-4 sm:left-7 bg-stone-900 text-white text-xs font-bold px-2.5 py-1 rounded-full tracking-wide">
                   Populaire
                 </span>
               )}
-              <p className={`text-sm font-semibold mb-1 ${pack.popular ? "text-stone-600" : "text-stone-400"}`}>
+              <p className={`text-xs sm:text-sm font-semibold mb-0.5 sm:mb-1 ${pack.popular ? "text-stone-600" : "text-stone-400"}`}>
                 {pack.label}
               </p>
-              <p className={`text-sm mb-5 ${pack.popular ? "text-stone-700" : "text-stone-500"}`}>
+              <p className={`text-xs sm:text-sm mb-3 sm:mb-5 leading-snug ${pack.popular ? "text-stone-700" : "text-stone-500"}`}>
                 {pack.desc}
               </p>
-              <p className="text-4xl font-bold text-stone-900 mb-1">{pack.price}€</p>
+              <p className="text-2xl sm:text-4xl font-bold text-stone-900 mb-0.5 sm:mb-1">{pack.price}€</p>
               <p className={`text-xs ${pack.popular ? "text-stone-600" : "text-stone-400"}`}>
                 HT · tout inclus
               </p>
               <a
                 href="#detail-mobilier"
-                className={`text-xs underline underline-offset-2 mt-1 inline-block transition-colors ${
+                className={`text-xs underline underline-offset-2 mt-1 hidden sm:inline-block transition-colors ${
                   pack.popular ? "text-stone-600 hover:text-stone-900" : "text-stone-400 hover:text-stone-600"
                 }`}
               >
@@ -80,7 +80,7 @@ export default function Packs() {
               </a>
               <button
                 onClick={() => setSelectedPack(pack.id)}
-                className={`mt-5 w-full py-2.5 rounded-xl text-sm font-semibold transition-colors ${
+                className={`mt-3 sm:mt-5 w-full py-2 sm:py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-colors ${
                   pack.popular
                     ? "bg-stone-900 text-white hover:bg-stone-800"
                     : "bg-white border border-stone-200 text-stone-900 hover:border-[#c9ed76]"
