@@ -17,7 +17,7 @@ export default function Navbar() {
         {/* Wordmark */}
         <a href="#" className="flex items-baseline select-none">
           <span className="font-light text-stone-500 text-lg tracking-tight">meubler</span>
-          <span className="font-bold text-stone-900 text-lg tracking-tight">Facile</span>
+          <span className="font-bold text-lg tracking-tight" style={{ color: "#c9ed76" }}>Facile</span>
           <span className="font-bold text-lg" style={{ color: "#c9ed76" }}>.</span>
           <span className="text-stone-400 text-sm">com</span>
         </a>

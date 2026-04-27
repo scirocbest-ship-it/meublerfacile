@@ -39,7 +39,9 @@ export default function Packs() {
           </span>
           <h2 className="section-title">Choisissez votre pack mobilier.</h2>
           <p className="section-sub">
-            Prix forfaitaires et publics. Livraison · Montage · Nettoyage. Tout est inclus.
+            Prix forfaitaires. Livraison · Montage · Nettoyage.
+            <br />
+            Tout est inclus.
           </p>
         </div>
 
@@ -68,6 +70,14 @@ export default function Packs() {
               <p className={`text-xs ${pack.popular ? "text-stone-600" : "text-stone-400"}`}>
                 HT · tout inclus
               </p>
+              <a
+                href="#detail-mobilier"
+                className={`text-xs underline underline-offset-2 mt-1 inline-block transition-colors ${
+                  pack.popular ? "text-stone-600 hover:text-stone-900" : "text-stone-400 hover:text-stone-600"
+                }`}
+              >
+                Voir le détail du mobilier
+              </a>
               <button
                 onClick={() => setSelectedPack(pack.id)}
                 className={`mt-5 w-full py-2.5 rounded-xl text-sm font-semibold transition-colors ${

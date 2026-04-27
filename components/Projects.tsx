@@ -1,18 +1,18 @@
 const projects = [
   {
-    label: "T3 — Lyon 7e",
+    label: "Salon lumineux — parquet point de Hongrie",
     tag: "Loué en 6 jours",
-    bg: "from-stone-100 to-stone-200",
+    img: "/realisation-1.jpg",
   },
   {
-    label: "T4 — Bordeaux Centre",
+    label: "Grand salon — double exposition",
     tag: "Pack populaire",
-    bg: "from-[#e8f5c0] to-[#c9ed76]/60",
+    img: "/realisation-2.jpg",
   },
   {
-    label: "T2 — Paris 11e",
+    label: "T3 avec mezzanine — verrières",
     tag: "Livré en 3 jours",
-    bg: "from-zinc-100 to-zinc-200",
+    img: "/realisation-3.jpg",
   },
 ];
 
@@ -34,22 +34,23 @@ export default function Projects() {
           {projects.map((p) => (
             <div
               key={p.label}
-              className={`rounded-2xl bg-gradient-to-br ${p.bg} aspect-[4/3] flex flex-col justify-end p-6 overflow-hidden relative group`}
+              className="rounded-2xl aspect-[4/3] flex flex-col justify-end overflow-hidden relative group"
             >
-              <div className="absolute inset-0 bg-stone-900/0 group-hover:bg-stone-900/5 transition-all duration-300" />
-              <div className="relative z-10">
+              <img
+                src={p.img}
+                alt={p.label}
+                className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-stone-900/60 via-stone-900/10 to-transparent" />
+              <div className="relative z-10 p-6">
                 <span className="inline-block bg-white/90 backdrop-blur text-stone-700 text-xs font-semibold px-3 py-1 rounded-full mb-2">
                   {p.tag}
                 </span>
-                <p className="text-stone-800 font-semibold">{p.label}</p>
+                <p className="text-white font-semibold drop-shadow">{p.label}</p>
               </div>
             </div>
           ))}
         </div>
-
-        <p className="text-center text-stone-400 text-sm mt-8">
-          Photos de réalisations disponibles sur demande.
-        </p>
       </div>
     </section>
   );

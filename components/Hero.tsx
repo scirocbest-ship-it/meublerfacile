@@ -20,9 +20,8 @@ export default function Hero() {
 
         {/* Sub */}
         <p className="text-center text-lg md:text-xl text-stone-500 max-w-2xl mx-auto mb-10 leading-relaxed">
-          De la petite cuillère à la housse de couette en passant par la poubelle de salle de bain
-          {" — "}tout est pensé dans le moindre détail. Vous choisissez votre{" "}
-          <span className="font-semibold text-stone-700">pack mobilier</span>, nous installons tout.
+          Choisissez votre{" "}
+          <span className="font-semibold text-stone-700">pack mobilier</span> selon le nombre de pièces — nous livrons, montons et nettoyons. Votre bien est prêt à louer.
         </p>
 
         {/* CTAs */}

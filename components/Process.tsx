@@ -2,12 +2,12 @@ const steps = [
   {
     num: "01",
     title: "Pré-commandez",
-    desc: "Choisissez votre pack mobilier selon la superficie. Remplissez le formulaire en ligne — aucun paiement requis.",
+    desc: "Choisissez votre pack mobilier selon le nombre de pièces. Remplissez le formulaire en ligne — aucun paiement requis.",
   },
   {
     num: "02",
     title: "On installe",
-    desc: "Notre équipe livre, monte et nettoie. Cartons évacués. Vous n'avez rien à faire.",
+    desc: "Notre équipe livre, monte et nettoie. Cartons évacués. Déco placée. Couverture tirée. Vous n'avez plus rien à faire.",
   },
   {
     num: "03",

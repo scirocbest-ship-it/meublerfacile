@@ -7,7 +7,7 @@ const advantages = [
   {
     icon: "◈",
     title: "Détail parfait",
-    desc: "De la petite cuillère à la housse de couette en passant par la poubelle de salle de bain — tout est pensé dans le moindre détail.",
+    desc: "Une décoration soignée, toujours au goût du jour. Des meubles durables, tendance, sélectionnés pour durer et plaire à vos locataires dès le premier regard.",
   },
   {
     icon: "◇",

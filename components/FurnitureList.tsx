@@ -71,7 +71,7 @@ export default function FurnitureList() {
   const [active, setActive] = useState(0);
 
   return (
-    <section className="bg-stone-50 py-24 md:py-32">
+    <section id="detail-mobilier" className="bg-stone-50 py-24 md:py-32">
       <div className="max-w-5xl mx-auto px-6">
         <div className="text-center mb-12">
           <span className="inline-block bg-[#c9ed76] text-stone-900 text-xs font-bold tracking-[0.2em] uppercase px-3 py-1.5 rounded-full mb-5">
