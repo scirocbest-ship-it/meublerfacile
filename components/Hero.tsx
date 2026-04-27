@@ -1,61 +1,58 @@
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex flex-col justify-center bg-stone-900 overflow-hidden">
-      {/* subtle grid texture */}
-      <div
-        className="absolute inset-0 opacity-[0.03]"
-        style={{
-          backgroundImage:
-            "linear-gradient(#fff 1px, transparent 1px), linear-gradient(90deg, #fff 1px, transparent 1px)",
-          backgroundSize: "60px 60px",
-        }}
-      />
-
-      <div className="relative z-10 max-w-5xl mx-auto px-6 py-24 md:py-32">
-        {/* wordmark */}
-        <div className="mb-12">
-          <span className="text-white/40 text-sm font-medium tracking-[0.3em] uppercase">
-            meublerfacile.com
+    <section className="bg-white pt-32 pb-24 md:pt-44 md:pb-32 overflow-hidden">
+      <div className="max-w-5xl mx-auto px-6">
+        {/* Badge */}
+        <div className="flex justify-center mb-8">
+          <span className="inline-flex items-center gap-2 bg-[#c9ed76] text-stone-900 text-xs font-bold tracking-[0.15em] uppercase px-4 py-2 rounded-full">
+            Pack mobilier · Conforme LMP / LMNP
           </span>
         </div>
 
-        <h1 className="text-5xl md:text-7xl font-bold text-white leading-[1.05] tracking-tight mb-8">
-          Meublez votre bien
+        {/* H1 */}
+        <h1 className="text-center text-4xl sm:text-5xl md:text-6xl font-bold text-stone-900 leading-[1.1] tracking-tight mb-6">
+          Votre bien meublé,
           <br />
-          <span className="text-brand-500">en 4 jours.</span>
+          prêt à louer.
           <br />
-          Sans effort.
+          <span style={{ color: "#7aaa2e" }}>En 4 jours ouvrables.</span>
         </h1>
 
-        <p className="text-xl text-white/60 max-w-lg mb-12 leading-relaxed">
-          Livraison, montage et nettoyage inclus. Votre appartement prêt à louer,
-          clé en main. Tarifs HT tout compris.
+        {/* Sub */}
+        <p className="text-center text-lg md:text-xl text-stone-500 max-w-2xl mx-auto mb-10 leading-relaxed">
+          De la petite cuillère à la housse de couette en passant par la poubelle de salle de bain
+          {" — "}tout est pensé dans le moindre détail. Vous choisissez votre{" "}
+          <span className="font-semibold text-stone-700">pack mobilier</span>, nous installons tout.
         </p>
 
-        <div className="flex flex-col sm:flex-row gap-4">
-          <a href="#contact" className="btn-primary text-center">
-            Demander un devis
+        {/* CTAs */}
+        <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
+          <a href="#packs" className="btn-primary text-center">
+            Passer une pré-commande
           </a>
-          <a
-            href="#packs"
-            className="inline-block border border-white/20 text-white font-semibold px-8 py-4 rounded-full hover:border-white/50 transition-all duration-200 text-center"
-          >
+          <a href="#packs" className="btn-secondary text-center">
             Voir les packs
           </a>
         </div>
 
-        {/* trust bar */}
-        <div className="mt-20 flex flex-wrap gap-8 items-center">
-          {[
-            { value: "4 jours", label: "délai garanti" },
-            { value: "5 packs", label: "T2 à T6" },
-            { value: "100%", label: "clé en main" },
-          ].map((stat) => (
-            <div key={stat.label} className="flex items-center gap-3">
-              <span className="text-2xl font-bold text-white">{stat.value}</span>
-              <span className="text-white/40 text-sm">{stat.label}</span>
+        {/* Stats */}
+        <div className="grid grid-cols-3 border border-stone-100 rounded-2xl overflow-hidden divide-x divide-stone-100">
+          <div className="py-7 text-center px-4">
+            <div className="text-3xl font-bold text-stone-900 mb-1">4</div>
+            <div className="text-xs text-stone-400 leading-snug">jours ouvrables</div>
+          </div>
+          <div className="py-7 text-center px-4">
+            <div className="text-3xl font-bold text-stone-900 mb-1">5</div>
+            <div className="text-xs text-stone-400 leading-snug">
+              packs T2 à T6
+              <br />
+              et plus sur demande
             </div>
-          ))}
+          </div>
+          <div className="py-7 text-center px-4">
+            <div className="text-3xl font-bold text-stone-900 mb-1">100%</div>
+            <div className="text-xs text-stone-400 leading-snug">clé en main</div>
+          </div>
         </div>
       </div>
     </section>

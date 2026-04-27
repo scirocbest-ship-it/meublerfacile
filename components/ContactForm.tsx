@@ -44,13 +44,13 @@ export default function ContactForm() {
     <section id="contact" className="bg-white py-24 md:py-32">
       <div className="max-w-2xl mx-auto px-6">
         <div className="text-center mb-14">
-          <p className="text-xs font-semibold tracking-[0.25em] uppercase text-brand-500 mb-4">
-            Devis gratuit
-          </p>
+          <span className="inline-block bg-[#c9ed76] text-stone-900 text-xs font-bold tracking-[0.2em] uppercase px-3 py-1.5 rounded-full mb-5">
+            Pré-commande / Demande de renseignement
+          </span>
           <h2 className="section-title">On vous rappelle sous 48h.</h2>
           <p className="section-sub">
             Remplissez le formulaire, notre équipe revient vers vous rapidement
-            pour confirmer votre commande selon les stocks disponibles.
+            pour confirmer votre commande. Aucun paiement requis.
           </p>
         </div>
 
@@ -172,11 +172,11 @@ export default function ContactForm() {
               disabled={loading}
               className="w-full btn-primary disabled:opacity-60 disabled:cursor-not-allowed disabled:transform-none"
             >
-              {loading ? "Envoi en cours…" : "Envoyer ma demande"}
+              {loading ? "Envoi en cours…" : "Envoyer ma pré-commande"}
             </button>
 
             <p className="text-center text-stone-400 text-xs">
-              Aucun paiement requis. Nous vous recontactons sous 48h.
+              Aucun paiement requis. Notre équipe vous recontacte sous 48h.
             </p>
           </form>
         )}

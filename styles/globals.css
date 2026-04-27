@@ -16,7 +16,11 @@
 
 @layer components {
   .btn-primary {
-    @apply inline-block bg-brand-500 text-white font-semibold px-8 py-4 rounded-full hover:bg-brand-600 transition-all duration-200 shadow-lg hover:shadow-xl hover:-translate-y-0.5;
+    @apply inline-block bg-[#c9ed76] text-stone-900 font-semibold px-8 py-4 rounded-full hover:bg-[#b8d960] transition-all duration-200 shadow-sm hover:shadow-md hover:-translate-y-0.5;
+  }
+
+  .btn-secondary {
+    @apply inline-block bg-white text-stone-900 font-semibold px-8 py-4 rounded-full border-2 border-stone-200 hover:border-stone-300 transition-all duration-200;
   }
 
   .section-title {
