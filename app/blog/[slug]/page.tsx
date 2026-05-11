@@ -69,10 +69,6 @@ export default async function ArticlePage({ params }: Props) {
                 src={article.coverImage}
                 alt={article.title}
                 className="w-full h-full object-cover"
-                onError={(e) => {
-                  (e.target as HTMLImageElement).src =
-                    "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=900&q=80";
-                }}
               />
             </div>
           </header>

@@ -42,10 +42,6 @@ export default function BlogPage() {
                       src={article.coverImage}
                       alt={article.title}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                      onError={(e) => {
-                        (e.target as HTMLImageElement).src =
-                          "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=600&q=80";
-                      }}
                     />
                   </div>
                   <div className="p-6">
