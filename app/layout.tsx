@@ -12,6 +12,9 @@ export const metadata: Metadata = {
   title: "MeublerFacile — Ameublement clé en main pour investisseurs",
   description:
     "Pack mobilier, livraison, montage en 4 jours ouvrables. Votre bien prêt à louer, sans effort.",
+  icons: {
+    icon: "/favicon.svg",
+  },
   openGraph: {
     title: "MeublerFacile — Ameublement clé en main",
     description: "Pack mobilier, livraison, montage en 4 jours. 100% clé en main.",
