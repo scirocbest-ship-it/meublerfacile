@@ -4,11 +4,11 @@ import { useState } from "react";
 import { CheckCircle } from "@phosphor-icons/react";
 
 const packs = [
-  { id: "T2", rooms: "1 ch + salon", price: "3 150", pieces: 2 },
-  { id: "T3", rooms: "2 ch + salon", price: "4 050", pieces: 3 },
-  { id: "T4", rooms: "3 ch + salon", price: "4 800", pieces: 4, popular: true },
-  { id: "T5", rooms: "4 ch + salon", price: "5 550", pieces: 5 },
-  { id: "T6", rooms: "5 ch + salon", price: "6 300", pieces: 6 },
+  { id: "T2", rooms: "1 ch + salon", price: "3 650", pieces: 2 },
+  { id: "T3", rooms: "2 ch + salon", price: "4 550", pieces: 3 },
+  { id: "T4", rooms: "3 ch + salon", price: "5 300", pieces: 4, popular: true },
+  { id: "T5", rooms: "4 ch + salon", price: "6 050", pieces: 5 },
+  { id: "T6", rooms: "5 ch + salon", price: "6 800", pieces: 6 },
 ];
 
 const included = [

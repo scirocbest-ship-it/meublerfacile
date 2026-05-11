@@ -100,11 +100,11 @@ export default function ContactForm() {
                   <label className="block text-xs font-semibold text-white/50 uppercase tracking-[0.12em] mb-2">Pack souhaité</label>
                   <select name="pack" value={form.pack} onChange={handleChange} required className={inputClass}>
                     <option value="" disabled>Sélectionnez votre pack</option>
-                    <option value="T2">Pack T2 — 3 150€ HT</option>
-                    <option value="T3">Pack T3 — 4 050€ HT</option>
-                    <option value="T4">Pack T4 — 4 800€ HT</option>
-                    <option value="T5">Pack T5 — 5 550€ HT</option>
-                    <option value="T6">Pack T6 — 6 300€ HT</option>
+                    <option value="T2">Pack T2 — 3 650€ HT</option>
+                    <option value="T3">Pack T3 — 4 550€ HT</option>
+                    <option value="T4">Pack T4 — 5 300€ HT</option>
+                    <option value="T5">Pack T5 — 6 050€ HT</option>
+                    <option value="T6">Pack T6 — 6 800€ HT</option>
                     <option value="other">T7 et plus — sur mesure</option>
                   </select>
                 </div>
