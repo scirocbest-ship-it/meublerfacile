@@ -6,6 +6,7 @@ const links = [
   { label: "Nos packs", href: "#packs" },
   { label: "Comment ça marche ?", href: "#comment-ca-marche" },
   { label: "Nos réalisations", href: "#realisations" },
+  { label: "Blog", href: "/blog" },
 ];
 
 export default function Navbar() {
