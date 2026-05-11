@@ -1,58 +1,102 @@
+"use client";
+
+import { ArrowRight, Star } from "@phosphor-icons/react";
+import ApartmentAnimation from "./ApartmentAnimation";
+
+const items = [
+  { delay: "0.1s", content: "badge" },
+  { delay: "0.2s", content: "h1" },
+  { delay: "0.3s", content: "p" },
+  { delay: "0.4s", content: "ctas" },
+  { delay: "0.5s", content: "stats" },
+];
+
 export default function Hero() {
+  const fadeUp = (delay: string) => ({
+    style: {
+      animation: `fadeUp 0.7s cubic-bezier(0.22, 1, 0.36, 1) ${delay} both`,
+    },
+  });
+
+  const fadeIn = (delay: string) => ({
+    style: {
+      animation: `fadeIn 0.8s ease-out ${delay} both`,
+    },
+  });
+
   return (
-    <section className="bg-white pt-32 pb-24 md:pt-44 md:pb-32 overflow-hidden">
-      <div className="max-w-5xl mx-auto px-6">
-        {/* Badge */}
-        <div className="flex justify-center mb-8">
-          <span className="inline-flex items-center gap-2 bg-[#c9ed76] text-stone-900 text-xs font-bold tracking-[0.15em] uppercase px-4 py-2 rounded-full">
-            Pack mobilier · Conforme LMP / LMNP
-          </span>
-        </div>
-
-        {/* H1 */}
-        <h1 className="text-center text-4xl sm:text-5xl md:text-6xl font-bold text-stone-900 leading-[1.1] tracking-tight mb-6">
-          Votre bien meublé,
-          <br />
-          prêt à louer.
-          <br />
-          <span style={{ color: "#7aaa2e" }}>En 4 jours ouvrables.</span>
-        </h1>
-
-        {/* Sub */}
-        <p className="text-center text-lg md:text-xl text-stone-500 max-w-2xl mx-auto mb-10 leading-relaxed">
-          Choisissez votre{" "}
-          <span className="font-semibold text-stone-700">pack mobilier</span> selon le nombre de pièces — nous livrons, montons et nettoyons. Votre bien est prêt à louer.
-        </p>
-
-        {/* CTAs */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-          <a href="#packs" className="btn-primary text-center">
-            Passer une pré-commande
-          </a>
-          <a href="#packs" className="btn-secondary text-center">
-            Voir les packs
-          </a>
-        </div>
-
-        {/* Stats */}
-        <div className="grid grid-cols-3 border border-stone-100 rounded-2xl overflow-hidden divide-x divide-stone-100">
-          <div className="py-7 text-center px-4">
-            <div className="text-3xl font-bold text-stone-900 mb-1">4</div>
-            <div className="text-xs text-stone-400 leading-snug">jours ouvrables</div>
+    <section className="relative min-h-[100dvh] bg-[#f5f5f0] flex items-stretch overflow-hidden">
+      {/* Left — content */}
+      <div className="relative z-10 flex-1 flex flex-col justify-center px-8 md:px-14 lg:px-20 pt-24 pb-16 max-w-2xl">
+        <div className="space-y-6">
+          <div {...fadeUp("0.1s")}>
+            <span className="inline-flex items-center gap-2 bg-[#1a1a14] text-[#c9ed76] text-xs font-bold tracking-[0.18em] uppercase px-4 py-2 rounded-full">
+              <Star size={10} weight="fill" />
+              Pack mobilier · Livraison · Montage
+            </span>
           </div>
-          <div className="py-7 text-center px-4">
-            <div className="text-3xl font-bold text-stone-900 mb-1">5</div>
-            <div className="text-xs text-stone-400 leading-snug">
-              packs T2 à T6
-              <br />
-              et plus sur demande
-            </div>
+
+          <h1
+            {...fadeUp("0.2s")}
+            className="text-[clamp(2.6rem,6vw,4.5rem)] font-bold text-[#1a1a14] leading-[1.05] tracking-tight"
+          >
+            Votre bien<br />
+            meublé,<br />
+            <span className="text-[#7aaa2e]">prêt à louer.</span>
+          </h1>
+
+          <p {...fadeUp("0.3s")} className="text-lg text-[#6b6b5e] max-w-md leading-relaxed">
+            Choisissez votre pack T2 → T6, on livre, monte et nettoie.{" "}
+            <span className="font-semibold text-[#1a1a14]">En 4 jours ouvrables.</span>{" "}
+            Conforme décret LMNP.
+          </p>
+
+          <div {...fadeUp("0.4s")} className="flex flex-col sm:flex-row gap-3 pt-2">
+            <a href="#packs" className="btn-primary group">
+              Voir les packs
+              <ArrowRight size={16} weight="bold" className="group-hover:translate-x-0.5 transition-transform" />
+            </a>
+            <a href="#comment-ca-marche" className="btn-ghost">
+              Comment ça marche
+            </a>
           </div>
-          <div className="py-7 text-center px-4">
-            <div className="text-3xl font-bold text-stone-900 mb-1">100%</div>
-            <div className="text-xs text-stone-400 leading-snug">clé en main</div>
+
+          <div
+            {...fadeUp("0.5s")}
+            className="flex items-center gap-6 pt-4 border-t border-[#1a1a14]/10"
+          >
+            {[
+              { value: "4j", label: "délai livraison" },
+              { value: "T2→T6", label: "5 packs dispo" },
+              { value: "100%", label: "clé en main" },
+            ].map(({ value, label }) => (
+              <div key={label}>
+                <div className="text-xl font-bold text-[#1a1a14]">{value}</div>
+                <div className="text-xs text-[#6b6b5e] mt-0.5">{label}</div>
+              </div>
+            ))}
           </div>
         </div>
+      </div>
+
+      {/* Right — animation panel */}
+      <div
+        {...fadeIn("0.3s")}
+        className="hidden lg:flex flex-1 max-w-[52%] relative"
+      >
+        <div className="absolute inset-0 bg-[#1a1a14]" />
+        <div className="absolute inset-0">
+          <ApartmentAnimation />
+        </div>
+        <div className="absolute inset-y-0 left-0 w-16 bg-gradient-to-r from-[#f5f5f0] to-transparent z-10" />
+      </div>
+
+      {/* Mobile animation preview */}
+      <div
+        {...fadeIn("0.5s")}
+        className="lg:hidden absolute bottom-0 right-0 w-44 h-28 rounded-tl-2xl overflow-hidden"
+      >
+        <ApartmentAnimation />
       </div>
     </section>
   );

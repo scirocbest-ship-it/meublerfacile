@@ -6,12 +6,13 @@ import Process from "@/components/Process";
 import Projects from "@/components/Projects";
 import FurnitureList from "@/components/FurnitureList";
 import ContactForm from "@/components/ContactForm";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
     <>
       <Navbar />
-      <main className="min-h-screen">
+      <main>
         <Hero />
         <Advantages />
         <Packs />
@@ -20,6 +21,7 @@ export default function Home() {
         <FurnitureList />
         <ContactForm />
       </main>
+      <Footer />
     </>
   );
 }
