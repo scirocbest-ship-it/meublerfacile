@@ -96,7 +96,7 @@ export default function Hero() {
         {...fadeIn("0.5s")}
         className="lg:hidden absolute bottom-0 right-0 w-44 h-28 rounded-tl-2xl overflow-hidden"
       >
-        <ApartmentAnimation />
+        <ApartmentAnimation minimal />
       </div>
     </section>
   );
